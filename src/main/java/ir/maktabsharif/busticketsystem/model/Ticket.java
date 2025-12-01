@@ -17,5 +17,5 @@ public class Ticket {
     private Journey journey;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "journey_user_id")
-    private User journeyUser;
+    private AppUser journeyAppUser;
 }
