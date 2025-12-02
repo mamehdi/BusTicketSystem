@@ -21,7 +21,7 @@ public class UserService {
     }
     public AppUser createUser(String username, String fullName, String planPassword,
                               Gender gender){
-        AppUser user=AppUser.builder().userName(username.trim()).fullName(fullName.trim())
+        AppUser user=AppUser.builder().username(username.trim()).fullName(fullName.trim())
                 .password(passwordEncoder.encode(planPassword)).gender(gender)
                 .role("ROLE_USER").build();
         return userRepository.save(user);
