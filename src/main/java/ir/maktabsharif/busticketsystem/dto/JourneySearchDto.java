@@ -1,14 +1,18 @@
 package ir.maktabsharif.busticketsystem.dto;
 
-import lombok.NonNull;
 
+import lombok.*;
 
 import java.time.LocalDate;
 
-public record JourneySearchDto(String origin, String destination, LocalDate travelDate) {
-    public JourneySearchDto(String origin, String destination, LocalDate travelDate) {
-        this.origin = origin;
-        this.destination = destination;
-        this.travelDate = travelDate;
-    }
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class JourneySearchDto {
+    private String origin;
+
+    private String destination;
+
+    private LocalDate travelDate;
 }
